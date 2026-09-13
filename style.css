@@ -65,7 +65,7 @@ body {
 .tombol-cta {
   margin-top: 15px;
   padding: 10px 25px;
-  background-color: var(--warna-aksen);
+  background-color: var(--warna-latar2);
   color: white;
   text-decoration: none;
   border-radius: 6px;
