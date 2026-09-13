@@ -386,3 +386,18 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+.container-list {
+  display: flex;
+  justify-content: center;
+}
+
+.container-list ul {
+  text-align: left;
+  max-width: 400px;
+  width: 100%;
+}
+
+.container-list li {
+  margin-bottom: 6px;
+}
