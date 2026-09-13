@@ -1,10 +1,13 @@
+html {
+  scroll-behavior: smooth;
+}
 
 :root {
-  --warna-utama: #800020;       /* coral gelap, untuk teks/heading (kontras cukup) */
-  --warna-aksen: #F3E6D5;        /* coral utama, untuk tombol & highlight */
-  --warna-aksen2: #FFF9F2;       /* teal, untuk hover kedua / variasi */
-  --warna-latar: #FFF9F2;        /* mint pucat, background utama */
-  --warna-latar2: #D45060;       /* pink lembut, background section selingan */
+  --warna-utama: #800020; /* coral gelap, untuk teks/heading (kontras cukup) */
+  --warna-aksen: #f3e6d5; /* coral utama, untuk tombol & highlight */
+  --warna-aksen2: #fff9f2; /* teal, untuk hover kedua / variasi */
+  --warna-latar: #fff9f2; /* mint pucat, background utama */
+  --warna-latar2: #d45060; /* pink lembut, background section selingan */
   --font-utama: Arial, sans-serif;
 }
 
@@ -21,6 +24,9 @@ body {
 }
 
 .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,15 +42,15 @@ body {
 }
 
 .navbar nav a:hover {
-  color: var(--warna-aksen);
+  color: var(--warna-latar2);
 }
 
 .hero {
   position: relative;
   height: 400px;
-  background-image: url('images/foto-latar.jpg');
+  background-image: url("images/zee-hero.jpeg");
   background-size: cover;
-  background-position: center;
+  background-position: top center;
 }
 
 .hero-overlay {
@@ -72,7 +78,7 @@ body {
 }
 
 .tombol-cta:hover {
-  background-color: #d97a7a; 
+  background-color: #d97a7a;
 }
 
 .footer {
@@ -125,7 +131,22 @@ body {
   padding: 25px 20px;
   border-radius: 10px;
   margin: 30px 0;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  .hero-overlay h1 {
+    font-size: 22px;
+  }
+  .hero-overlay p {
+    font-size: 14px;
+    padding: 0 20px;
+  }
 }
 
 .stat-item {
@@ -148,7 +169,7 @@ body {
   padding: 30px;
   border-radius: 8px;
   margin-bottom: 25px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .section-title {
@@ -196,7 +217,7 @@ body {
   background-color: var(--warna-latar);
   padding: 15px 20px;
   border-radius: 6px;
-  border: 1px solid var(--warna-aksen1);
+  border: 1px solid var(--warna-aksen);
 }
 
 .timeline-date {
@@ -253,7 +274,6 @@ body {
   }
 }
 
-
 .portfolio {
   padding: 60px 40px;
   text-align: center;
@@ -279,7 +299,7 @@ body {
 
 .portfolio-item img {
   width: 100%;
-  height: 220px;
+  aspect-ratio: 2 / 3;
   object-fit: cover;
   display: block;
 }
@@ -310,7 +330,6 @@ body {
   padding: 8px 20px;
   border-radius: 4px;
 }
-
 
 .kontak {
   padding: 60px 40px;
@@ -362,7 +381,7 @@ body {
 .tombol-kirim {
   align-self: flex-start;
   padding: 10px 25px;
-  background-color: var(--warna-aksen);
+  background-color: var(--warna-latar2);
   color: white;
   border: none;
   border-radius: 6px;
@@ -372,7 +391,7 @@ body {
 }
 
 .tombol-kirim:hover {
-  background-color: #1d4ed8;
+  background-color: #d97a7a;
 }
 
 @media (max-width: 768px) {
